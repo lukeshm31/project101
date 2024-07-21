@@ -8,13 +8,15 @@ import Layout from './Components/Student/00_layout_elements/02_layout';
 import { Test01 } from './Components/Student/01_functions/test_a';
 import { Test02 } from './Components/Student/01_functions/test02';
 import InputBox from './Components/Test/Test1';
+import { BgChanger } from './Components/Test/Test2';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>} >
       <Route path='a' element={<Test01/>} >  </Route>
       <Route path='b' element={<Test02/>}>  </Route>
-      <Route path='c' element={<InputBox/>} style={{alignItems: 'center', justifyContent: 'center', padding:'20px'}}> </Route>
+      <Route path='c' element={<InputBox/>}> </Route>
+      <Route path='d' element={<BgChanger/>}> </Route>
       
     </Route>
   )

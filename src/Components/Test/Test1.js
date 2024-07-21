@@ -8,6 +8,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import useCounter from '../../Hooks/useCounter';
+import Button from '@mui/material/Button';
+
 
 function InputBox({
     label,
@@ -22,6 +25,8 @@ function InputBox({
 }) {
    const amountInputId = useId()
 
+   const { count, increment, decrement, reset } = useCounter(10); 
+
     return (
         <div> 
             <Box id='st001'
@@ -31,8 +36,7 @@ function InputBox({
                     flexWrap: 'wrap',
                     '& > :not(style)': {
                     m: 1,
-                    width: 500,
-                    height: 300,
+                    
                     },
                 }}
                 >
@@ -65,8 +69,13 @@ function InputBox({
                             </Grid>
                             
                         </Paper>
-                        <Paper elevation={3} sx={{margin:2, height:100}}> 
-                           abc
+                        <Paper elevation={3} padding={1} sx={{margin:2}}> 
+                        <Box container spacing={3} padding={1} >
+                            <h1>Count: {count}</h1>
+                            <Button variant="contained" sx={{margin:2}} onClick={increment}>Increment</Button>
+                            <Button variant="contained" sx={{margin:2}} onClick={decrement}>Decrement</Button>
+                            <Button variant="contained" sx={{margin:2}} onClick={reset}>Reset</Button>
+                        </Box>
                         </Paper>
                 </Paper>
             </Box>
