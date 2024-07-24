@@ -10,6 +10,7 @@ import { Test02 } from './Components/Student/01_functions/test02';
 import InputBox from './Components/Test/Test1';
 import { BgChanger } from './Components/Test/Test2';
 import { Test4 } from './Components/Test/Test4';
+import ToggleColorMode from './Components/Test/Test6';
 
 
 const router = createBrowserRouter(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='c' element={<InputBox/>}> </Route>
       <Route path='d/:userId' element={<BgChanger/>}> </Route>
       <Route path='e' element={<Test4/>}> </Route>
+      <Route path='f' element={<ToggleColorMode/>}> </Route>
       
       
     </Route>
