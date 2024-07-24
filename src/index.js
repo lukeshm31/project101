@@ -9,6 +9,8 @@ import { Test01 } from './Components/Student/01_functions/test_a';
 import { Test02 } from './Components/Student/01_functions/test02';
 import InputBox from './Components/Test/Test1';
 import { BgChanger } from './Components/Test/Test2';
+import { Test4 } from './Components/Test/Test4';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,7 +18,9 @@ const router = createBrowserRouter(
       <Route path='a' element={<Test01/>} >  </Route>
       <Route path='b' element={<Test02/>}>  </Route>
       <Route path='c' element={<InputBox/>}> </Route>
-      <Route path='d' element={<BgChanger/>}> </Route>
+      <Route path='d/:userId' element={<BgChanger/>}> </Route>
+      <Route path='e' element={<Test4/>}> </Route>
+      
       
     </Route>
   )
