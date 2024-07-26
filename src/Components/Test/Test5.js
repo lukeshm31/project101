@@ -33,6 +33,8 @@ function MyApp() {
 
 export default function ToggleColorMode() {
   const [mode, setMode] = React.useState('light');
+
+     //to update the text value of 'mode' state
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -42,6 +44,7 @@ export default function ToggleColorMode() {
     [],
   );
 
+    // to create the theme and inject value of mode:'light/dark'
   const theme = React.useMemo(
     () =>
       createTheme({
