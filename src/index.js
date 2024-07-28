@@ -11,7 +11,7 @@ import InputBox from './Components/Test/Test1';
 import { BgChanger } from './Components/Test/Test2';
 import { Test4 } from './Components/Test/Test4';
 import ToggleColorMode from './Components/Test/Test6';
-import { Test7 } from './Components/Test/Test7';
+import Test8 from './Components/Test/Test8';
 
 
 const router = createBrowserRouter(
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path='d/:userId' element={<BgChanger/>}> </Route>
       <Route path='e' element={<Test4/>}> </Route>
       <Route path='f' element={<ToggleColorMode/>}> </Route>
-      <Route path='g' element={<Test7/>}> </Route>
+      <Route path='g' element={<Test8/>}> </Route>
       
       
     </Route>
