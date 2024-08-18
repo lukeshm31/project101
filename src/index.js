@@ -12,6 +12,9 @@ import { BgChanger } from './Components/Test/Test2';
 import { Test4 } from './Components/Test/Test4';
 import ToggleColorMode from './Components/Test/Test6';
 import Test8 from './Components/Test/Test8';
+import { Test12 } from './Components/Test/Test12';
+import Test13 from './Components/Test/Test13';
+import Test14 from './Components/Test/Test14';
 
 
 const router = createBrowserRouter(
@@ -24,6 +27,9 @@ const router = createBrowserRouter(
       <Route path='e' element={<Test4/>}> </Route>
       <Route path='f' element={<ToggleColorMode/>}> </Route>
       <Route path='g' element={<Test8/>}> </Route>
+      <Route path='h' element={<Test12/>}> </Route>
+      <Route path='i' element={<Test13/>}> </Route>
+      <Route path='j' element={<Test14/>}> </Route>
       
       
     </Route>
