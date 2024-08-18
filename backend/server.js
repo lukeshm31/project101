@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const usersRouter = require('./controllers/userController'); // Assuming this file is in the same directory
 
 const app = express();
 const port = process.env.PORT || 5000; // Changed to 5000
@@ -9,18 +10,19 @@ const port = process.env.PORT || 5000; // Changed to 5000
 app.use(cors());
 app.use(express.json());
 
+
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/your_database_name', {
+mongoose.connect('mongodb://localhost/Test4_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log("MongoDB database connection established successfully"))
 .catch(err => console.log("MongoDB connection error: ", err));
 
+console.log(express.response.status)
+
 // Define routes here
-app.get('/', (req, res) => {
-  res.send('Hello from the backend!');
-});
+app.use('/', usersRouter); ;
 
 // Start the server
 app.listen(port, () => {
