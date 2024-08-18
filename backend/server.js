@@ -22,7 +22,7 @@ mongoose.connect('mongodb://localhost/Test4_db', {
 console.log(express.response.status)
 
 // Define routes here
-app.use('/', usersRouter); ;
+app.use('/', usersRouter);
 
 // Start the server
 app.listen(port, () => {

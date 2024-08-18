@@ -15,6 +15,7 @@ import Test8 from './Components/Test/Test8';
 import { Test12 } from './Components/Test/Test12';
 import Test13 from './Components/Test/Test13';
 import Test14 from './Components/Test/Test14';
+import Test15 from './Components/Test/Test15';
 
 
 const router = createBrowserRouter(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path='h' element={<Test12/>}> </Route>
       <Route path='i' element={<Test13/>}> </Route>
       <Route path='j' element={<Test14/>}> </Route>
+      <Route path='k/:id' element={<Test15/>}> </Route>
       
       
     </Route>
