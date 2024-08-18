@@ -9,7 +9,8 @@ const Test15 = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000`); // Replace with your API endpoint
+        const url = `http://localhost:5000/`+ id
+        const response = await axios.get(url); // Replace with your API endpoint
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -27,14 +28,14 @@ const Test15 = () => {
   return (
     <div>
       {id}
-      <h2>Users</h2>
       <ul>
-        Name:{users[0].name} <br/>
-        Name:{users[0].designation} <br/>
-        Name:{users[0].hobby} <br/>
-        Name:{users[0].userid} <br/>
-        <hr/>
+        <li> {users.name} </li>
+        <li> {users.designation} </li>
+        <li> {users.hobby} </li>
+        
+
       </ul>
+
     </div>
   );
 };

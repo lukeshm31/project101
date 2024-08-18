@@ -16,13 +16,13 @@ usersRouter.get('/', async (req, res) => {
 // Route to fetch a specific user by ID
 usersRouter.get('/:id', async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await User.findOne({"userid":req.params.id})
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
     res.json(user);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch user' });
+    res.status(500).json({ error: 'Failed to fetch user....' });
   }
 });
 
